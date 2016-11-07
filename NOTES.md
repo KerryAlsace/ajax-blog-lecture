@@ -1,3 +1,6 @@
+https://www.youtube.com/watch?v=E8TJmwW5ayQ
+https://www.youtube.com/watch?v=XxzayZma5Ew
+
 1. The ability to load the comments for a post via AJAX
 
   Manually Trigger AJAX - Client Side Logic Model - Generic - Used in Ember, Angular, React, and jQuery
