@@ -29,10 +29,11 @@ $(function() {
       $ol.html("") // emptied the OL
 
       // iterate over each comment within json
-      // with each comment data, append an LI to the OL
-
-      debugger
-    })
+      json.forEach(function(comment){
+        // with each comment data, append an LI to the OL
+        $ol.append("<li>" + comment.content + "</li>");
+      });
+    });
 
     // load that response into the html of the page
     e.preventDefault();
