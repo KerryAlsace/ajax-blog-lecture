@@ -1,9 +1,12 @@
 $(function() {
   $("a.load_comments").on("click", function(e){
+    // We just clicked the load comments link
+    // Let's use that HREF attribute of the link as the URL for the request
+
     // fire some ajax
     $.ajax({
       method: "GET",
-      url: , // What URL do we want to fire this request to?
+      url: this.href
     }).done(function(data) {
       // get a response (as variable 'data')
 
