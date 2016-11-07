@@ -1,3 +1,5 @@
+// Get comments AJAX, replaced by remote true
+
 // $(function(){
 //   // $("a.load_comments").on("click", function(e){
 //     // You just clicked on the Load Comments Link
@@ -47,3 +49,12 @@
 //     e.preventDefault();
 //   });
 // });
+
+
+// Submit comments AJAX (soon to be replaced by remote true)
+$(function(){
+  $("#new_comment").on("submit", function(e){
+    alert("You clicked submit");
+    e.preventDefault();
+  });
+});
