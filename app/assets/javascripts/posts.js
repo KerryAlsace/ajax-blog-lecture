@@ -75,8 +75,9 @@ $(function(){
       url: url,
       data: data,
       success: function(response){
-        var $ol = $("div.comments ol")
-        $ol.append(response)
+        $("#comment_content").val("");
+        var $ol = $("div.comments ol");
+        $ol.append(response);
       }
     });
 
