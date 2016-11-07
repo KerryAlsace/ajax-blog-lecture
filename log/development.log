@@ -555,3 +555,12 @@ Processing by CommentsController#index as */*
   [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
   Rendered comments/index.html.erb (9.5ms)
 Completed 200 OK in 61ms (Views: 36.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/1/comments" for ::1 at 2016-11-07 14:11:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CommentsController#index as HTML
+  Parameters: {"post_id"=>"1"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+Completed 200 OK in 65ms (Views: 8.7ms | ActiveRecord: 2.0ms)

@@ -4,7 +4,8 @@ class CommentsController < ApplicationController
   def index
     @comments = @post.comments
 
-    render :layout => false
+    # render :layout => false
+    render :json => @comments
   end
 
   private
