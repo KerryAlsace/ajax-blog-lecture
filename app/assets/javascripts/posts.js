@@ -17,9 +17,13 @@ $(function() {
     //   alert("broken!");
     // });
 
-    $.get(this.href).success(function(response){
-      $("div.comments").html(response);
-    })
+    // Request using HTML
+    // $.get(this.href).success(function(response){
+    //   $("div.comments").html(response);
+    // })
+
+    // Request using JSON
+    
 
     // load that response into the html of the page
     e.preventDefault();
