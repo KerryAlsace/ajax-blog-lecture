@@ -1228,3 +1228,17 @@ Completed 200 OK in 447ms (Views: 444.5ms | ActiveRecord: 0.4ms)
 
 
 Started GET "/assets/posts.self-39cfa21f9a37cc4be80f687caa97234cd2bc1e6d82474b108d9bb566520608f8.js?body=1" for ::1 at 2016-11-07 17:21:10 -0500
+
+
+Started GET "/posts/1" for ::1 at 2016-11-07 17:24:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  Rendered comments/_comments.html.erb (3.3ms)
+  Rendered posts/show.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 476ms (Views: 415.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/posts.self-5277047ad715f89100c0f63e86893b3f021df46e6ccbd96094f1da8a031eab25.js?body=1" for ::1 at 2016-11-07 17:24:30 -0500

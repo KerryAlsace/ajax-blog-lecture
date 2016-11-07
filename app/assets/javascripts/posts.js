@@ -58,6 +58,7 @@ $(function(){
     // 1. We need the URL to submit the POST request to
     // 2. We need the form data
 
+    console.log(this)
     // 3. Send a POST request to the correct place that the 
     // form would have gone to anyway, along with the actual
     // form data
