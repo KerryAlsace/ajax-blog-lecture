@@ -7,10 +7,12 @@ $(function() {
     $.ajax({
       method: "GET",
       url: this.href
-    }).done(function(data) {
-      // get a response (as variable 'data')
+    }).done(function(response) {
+      // get a response (as variable 'response')
 
-      console.log(data)
+      // $("div.comments").html(response);
+      console.log(response)
+      debugger
 
       // Load data into dom
     });
