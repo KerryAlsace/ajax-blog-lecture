@@ -534,3 +534,24 @@ RuntimeError ("Whoops"):
   Rendered /Users/kerrydougherty/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
   Rendered /Users/kerrydougherty/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.2ms)
   Rendered /Users/kerrydougherty/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (90.7ms)
+
+
+Started GET "/posts/1" for ::1 at 2016-11-07 13:54:35 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 440ms (Views: 402.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/posts.self-6254c14ffa4297e08487cf2887b756fb6819e6977c6a1b62b013c101296a469e.js?body=1" for ::1 at 2016-11-07 13:54:36 -0500
+
+
+Started GET "/posts/1/comments" for ::1 at 2016-11-07 13:54:38 -0500
+Processing by CommentsController#index as */*
+  Parameters: {"post_id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered comments/index.html.erb (9.5ms)
+Completed 200 OK in 61ms (Views: 36.7ms | ActiveRecord: 1.0ms)

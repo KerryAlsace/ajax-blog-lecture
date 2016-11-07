@@ -1,21 +1,25 @@
 $(function() {
   $("a.load_comments").on("click", function(e){
-    // We just clicked the load comments link
-    // Let's use that HREF attribute of the link as the URL for the request
+    // // We just clicked the load comments link
+    // // Let's use that HREF attribute of the link as the URL for the request
 
-    // fire some ajax
-    $.ajax({
-      method: "GET",
-      url: this.href
-    }).success(function(response) {
-      // get a response (as variable 'response')
+    // // fire some ajax
+    // $.ajax({
+    //   method: "GET",
+    //   url: this.href
+    // }).success(function(response) {
+    //   // get a response (as variable 'response')
 
+    //   $("div.comments").html(response);
+
+    //   // Load data into dom
+    // }).error(function(notNeeded) {
+    //   alert("broken!");
+    // });
+
+    $.get(this.href).success(function(response){
       $("div.comments").html(response);
-
-      // Load data into dom
-    }).error(function(notNeeded) {
-      alert("broken!");
-    });
+    })
 
     // load that response into the html of the page
     e.preventDefault();
