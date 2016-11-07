@@ -709,3 +709,62 @@ Processing by CommentsController#index as JS
   Rendered comments/_comments.html.erb (9.5ms)
   Rendered comments/index.js.erb (31.7ms)
 Completed 200 OK in 83ms (Views: 57.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/1" for ::1 at 2016-11-07 14:36:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.7ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 358ms (Views: 323.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/1/comments?_=1478547417502" for ::1 at 2016-11-07 14:36:58 -0500
+Processing by CommentsController#index as JS
+  Parameters: {"_"=>"1478547417502", "post_id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered comments/_comments.html.erb (12.9ms)
+  Rendered comments/index.js.erb (48.2ms)
+Completed 200 OK in 120ms (Views: 77.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/1/comments?_=1478547417503" for ::1 at 2016-11-07 14:36:59 -0500
+Processing by CommentsController#index as JS
+  Parameters: {"_"=>"1478547417503", "post_id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered comments/_comments.html.erb (1.2ms)
+  Rendered comments/index.js.erb (19.9ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1/comments?_=1478547417504" for ::1 at 2016-11-07 14:36:59 -0500
+Processing by CommentsController#index as JS
+  Parameters: {"_"=>"1478547417504", "post_id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered comments/_comments.html.erb (1.0ms)
+  Rendered comments/index.js.erb (19.6ms)
+Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1/comments?_=1478547417505" for ::1 at 2016-11-07 14:37:00 -0500
+Processing by CommentsController#index as JS
+  Parameters: {"_"=>"1478547417505", "post_id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered comments/_comments.html.erb (1.1ms)
+  Rendered comments/index.js.erb (19.2ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1/comments?_=1478547417506" for ::1 at 2016-11-07 14:37:00 -0500
+Processing by CommentsController#index as JS
+  Parameters: {"_"=>"1478547417506", "post_id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered comments/_comments.html.erb (0.9ms)
+  Rendered comments/index.js.erb (19.6ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.2ms)
