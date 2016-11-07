@@ -1281,3 +1281,63 @@ Processing by CommentsController#create as */*
   [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
   Rendered comments/show.html.erb (0.6ms)
 Completed 200 OK in 26ms (Views: 19.9ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/posts/1/comments" for ::1 at 2016-11-07 17:43:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CommentsController#create as */*
+  Parameters: {"authenticity_token"=>"2yA5lFlPHTC53T06XciVHKtG9uJb+dxXuTSVmjdGYxAbRtMg42fNU+vEP0qCPi9mOKFeVIVWXgVnecxp2YLAjQ==", "comment"=>{"content"=>"new comment"}, "post_id"=>"1"}
+  [1m[35mPost Load (0.7ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "comments" ("content", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "new comment"], ["post_id", 1], ["created_at", "2016-11-07 22:43:17.753058"], ["updated_at", "2016-11-07 22:43:17.753058"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  Rendered comments/show.html.erb (1.9ms)
+Completed 200 OK in 94ms (Views: 26.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/1" for ::1 at 2016-11-07 17:43:20 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  Rendered comments/_comments.html.erb (2.5ms)
+  Rendered posts/show.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 408ms (Views: 405.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/posts.self-677134d520f39f78a0adb59af972473306cdd12155ccc594e4f88bc918955c7c.js?body=1" for ::1 at 2016-11-07 17:43:20 -0500
+
+
+Started POST "/posts/1/comments" for ::1 at 2016-11-07 17:43:25 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oFO3MmDJGhn+WBu0Ur0VsuHkbj+KTFhxDCTlMXVsqpVgNV2G2uHKeqxBGcSNS6/IcgPGiVTj2iPSabzCm6gJCA==", "comment"=>{"content"=>"new"}, "commit"=>"Create Comment", "post_id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("content", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "new"], ["post_id", 1], ["created_at", "2016-11-07 22:43:25.888380"], ["updated_at", "2016-11-07 22:43:25.888380"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  Rendered comments/show.html.erb (0.4ms)
+Completed 200 OK in 9ms (Views: 2.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/posts/1" for ::1 at 2016-11-07 17:44:15 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  Rendered comments/_comments.html.erb (1.3ms)
+  Rendered posts/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 86ms (Views: 83.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/posts.self-4438666eb7a2c14c44dfd1188b26ec00f3b3ea734e8d232a3e4bebc712030765.js?body=1" for ::1 at 2016-11-07 17:44:16 -0500
+
+
+Started POST "/posts/1/comments" for ::1 at 2016-11-07 17:44:19 -0500
+Processing by CommentsController#create as */*
+  Parameters: {"authenticity_token"=>"6mq2zwnNxv5oN80yXPaa36UjIWKSTYfpgPsqQwn5uN0qDFx7s+UWnTouz0KDACClNsSJ1EziBbtetnOw5z0bQA==", "comment"=>{"content"=>"kerry"}, "post_id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("content", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "kerry"], ["post_id", 1], ["created_at", "2016-11-07 22:44:19.141734"], ["updated_at", "2016-11-07 22:44:19.141734"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  Rendered comments/show.html.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 16.3ms | ActiveRecord: 2.9ms)
