@@ -3,7 +3,6 @@ class CommentsController < ApplicationController
 
   def index
     @comments = @post.comments
-    raise 'Whoops'.inspect
 
     render 'comments/index', :layout => false
   end
