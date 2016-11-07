@@ -10,9 +10,7 @@ $(function() {
     }).done(function(response) {
       // get a response (as variable 'response')
 
-      // $("div.comments").html(response);
-      console.log(response)
-      debugger
+      $("div.comments").html(response);
 
       // Load data into dom
     });
