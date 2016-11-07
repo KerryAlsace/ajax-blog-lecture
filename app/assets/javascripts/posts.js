@@ -23,7 +23,10 @@ $(function() {
     // })
 
     // Request using JSON
-    
+    $.get(this.href).success(function(json){
+      // iterate over each comment
+      debugger
+    })
 
     // load that response into the html of the page
     e.preventDefault();
