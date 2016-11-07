@@ -19,3 +19,7 @@ https://www.youtube.com/watch?v=XxzayZma5Ew
 
 
 2. The ability to submit a new comment via AJAX
+
+
+
+- In console, click settings, then under console, click to 'Log XMLHttpRequests'
