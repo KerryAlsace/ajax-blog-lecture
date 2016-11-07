@@ -16,12 +16,10 @@
 
 <%= render 'comments/comments' %>
 
-<form>
-  <textarea></textarea>
-    <p>
-      <input type="submit">
-    </p>
-</form>
+<%= form_for(@comment, :url => post_comments_path(@post)) do |f| %>
+  <%= f.text_area :content %>
+  <p><%= f.submit %></p>
+<% end %>
 
 <!-- <div class="comments">
   <ol>
