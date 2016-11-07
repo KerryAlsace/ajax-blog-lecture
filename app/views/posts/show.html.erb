@@ -11,7 +11,7 @@
 </p>
 
 <p>
-  <%= link_to "Load Comments", post_comments_path(@post), :class => "load_comments" %>
+  <%= link_to "Load Comments", post_comments_path(@post), :class => "load_comments", :remote => true %>
 </p>
 
 <div class="comments">
