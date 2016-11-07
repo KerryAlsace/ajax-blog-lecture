@@ -1,6 +1,10 @@
 $(function() {
   $("a.load_comments").on("click", function(e){
-    alert("You clicked this link");
+    // fire some ajax
+
+    // get a response
+
+    // load that response into the html of the page
     e.preventDefault();
   });
 });
