@@ -1,3 +1,6 @@
+https://www.youtube.com/watch?v=E8TJmwW5ayQ
+https://www.youtube.com/watch?v=XxzayZma5Ew
+
 1. The ability to load the comments for a post via AJAX
 
   Manually Trigger AJAX - Client Side Logic Model - Generic - Used in Ember, Angular, React, and jQuery
@@ -22,3 +25,6 @@
     - How are we going to know the URL of that POST request
   C. We need actually take the data from the AJAX POST request and create the corresponding comment
   D. Send back HTML/JSON/JS of the comment that was added and inject that comment into the comment OL on the DOM.
+
+
+- In console, click settings, then under console, click to 'Log XMLHttpRequests'
