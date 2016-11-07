@@ -56,10 +56,8 @@ $(function(){
   $("#new_comment").on("submit", function(e){
     // 1. We need the URL to submit the POST request to
     url = this.action
-    console.log(this)
 
-    debugger
-
+    // 2. We need the form data
     data = {
       'authenticity_token': $("input[name='authenticity_token']").val(),
       'comment': {
@@ -67,12 +65,21 @@ $(function(){
       }
     };
 
-
-    // 2. We need the form data
-
     // 3. Send a POST request to the correct place that the 
     // form would have gone to anyway, along with the actual
     // form data
+
+    // Low-level implementation
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: data,
+      success: function(response){
+        debugger
+      }
+    });
+
+
     e.preventDefault();
   });
 });

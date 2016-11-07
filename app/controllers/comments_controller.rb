@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
   def create
     @comment = @post.comments.build(comments_params)
     if @comment.save
-      redirect_to @post
+      render 'comments/show', :layout => false
     else
       render 'posts/show'
     end
