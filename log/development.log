@@ -790,3 +790,20 @@ Processing by CommentsController#index as JS
   Rendered comments/_comments.html.erb (15.9ms)
   Rendered comments/index.js.erb (46.7ms)
 Completed 200 OK in 107ms (Views: 82.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2016-11-07 16:51:28 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kerrydougherty/.rvm/gems/ruby-2.3.1/gems/railties-4.2.5.1/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 30ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/1" for ::1 at 2016-11-07 16:51:34 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.8ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  Rendered comments/_comments.html.erb (10.4ms)
+  Rendered posts/show.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 401ms (Views: 355.6ms | ActiveRecord: 1.9ms)
