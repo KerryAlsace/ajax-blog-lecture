@@ -24,7 +24,12 @@ $(function() {
 
     // Request using JSON
     $.get(this.href).success(function(json){
-      // iterate over each comment
+      // clear the OL html (in case there were stale comments)
+      $("div.comments ol").html("") // emptied the OL
+
+      // iterate over each comment within json
+      // with each comment data, append an LI to the OL
+
       debugger
     })
 

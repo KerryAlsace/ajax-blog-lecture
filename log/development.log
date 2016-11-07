@@ -564,3 +564,23 @@ Processing by CommentsController#index as HTML
   [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
   [1m[36mComment Load (0.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
 Completed 200 OK in 65ms (Views: 8.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/1" for ::1 at 2016-11-07 14:13:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 452ms (Views: 415.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/posts.self-21f8d82ec13b301ca6037889637c3f42d4ef3f8e49aea1973c859a28e21f1d31.js?body=1" for ::1 at 2016-11-07 14:13:44 -0500
+
+
+Started GET "/posts/1/comments" for ::1 at 2016-11-07 14:13:45 -0500
+Processing by CommentsController#index as */*
+  Parameters: {"post_id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (1.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+Completed 200 OK in 60ms (Views: 16.3ms | ActiveRecord: 2.1ms)
