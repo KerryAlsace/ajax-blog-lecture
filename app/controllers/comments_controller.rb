@@ -3,6 +3,8 @@ class CommentsController < ApplicationController
 
   def index
     @comments = @post.comments
+
+    render 'comments/index', :layout => false
   end
 
   private
