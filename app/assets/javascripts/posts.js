@@ -1,8 +1,16 @@
 $(function() {
   $("a.load_comments").on("click", function(e){
     // fire some ajax
+    $.ajax({
+      method: "GET",
+      url: , // What URL do we want to fire this request to?
+    }).done(function(data) {
+      // get a response (as variable 'data')
 
-    // get a response
+      console.log(data)
+
+      // Load data into dom
+    });
 
     // load that response into the html of the page
     e.preventDefault();
