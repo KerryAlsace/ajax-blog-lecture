@@ -18,7 +18,7 @@
   <%= render 'comments/comments' %>
 </div>
 
-<%= form_for([@post, @comment]) do |f| %>
+<%= form_for([@post, @comment], :remote => true) do |f| %>
   <%= f.text_area :content %>
   <p><%= f.submit %></p>
 <% end %>

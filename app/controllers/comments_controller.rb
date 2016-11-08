@@ -11,7 +11,8 @@ class CommentsController < ApplicationController
   def create
     @comment = @post.comments.build(comments_params)
     if @comment.save
-      render 'comments/show', :layout => false
+      # render 'comments/show', :layout => false
+      render 'create.js', :layout => false
     else
       render 'posts/show'
     end

@@ -51,23 +51,23 @@
 // });
 
 
-// Submit comments AJAX (soon to be replaced by remote true)
-$(function(){
-  $("#new_comment").on("submit", function(e){
-    e.preventDefault();
+// // Submit comments AJAX (soon to be replaced by remote true)
+// $(function(){
+//   $("#new_comment").on("submit", function(e){
+//     e.preventDefault();
 
-    // Low-level implementation
-    $.ajax({
-      type: ($("input[name='_method']").val() || this.method),
-      url: this.action,
-      data: $(this).serialize(),
-      success: function(response){
-        $("#comment_content").val("");
-        var $ol = $("div.comments ol");
-        $ol.append(response);
-      }
-    });
+//     // Low-level implementation
+//     $.ajax({
+//       type: ($("input[name='_method']").val() || this.method),
+//       url: this.action,
+//       data: $(this).serialize(),
+//       success: function(response){
+//         $("#comment_content").val("");
+//         var $ol = $("div.comments ol");
+//         $ol.append(response);
+//       }
+//     });
 
 
-  });
-});
+//   });
+// });
