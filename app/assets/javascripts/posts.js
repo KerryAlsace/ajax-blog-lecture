@@ -54,26 +54,13 @@
 // Submit comments AJAX (soon to be replaced by remote true)
 $(function(){
   $("#new_comment").on("submit", function(e){
-    // 1. We need the URL to submit the POST request to
-    url = this.action
-
-    // 2. We need the form data
-    data = {
-      'authenticity_token': $("input[name='authenticity_token']").val(),
-      'comment': {
-        'content': $("#comment_content").val()
-      }
-    };
-
-    // 3. Send a POST request to the correct place that the 
-    // form would have gone to anyway, along with the actual
-    // form data
+    e.preventDefault();
 
     // Low-level implementation
     $.ajax({
-      type: "POST",
-      url: url,
-      data: data,
+      type: ($("input[name='_method']").val() || this.method),
+      url: this.action,
+      data: $(this).serialize(),
       success: function(response){
         $("#comment_content").val("");
         var $ol = $("div.comments ol");
@@ -82,6 +69,5 @@ $(function(){
     });
 
 
-    e.preventDefault();
   });
 });
